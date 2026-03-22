@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<!-- ================= SEO ================= -->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>QR Code Generator Free Online | Create QR Code for URL, Text, WhatsApp</title>
+
+<meta name="description" content="Free QR code generator online tool to create QR codes for URL, text, phone, WhatsApp. Instant download, no signup, 100% secure browser tool.">
+
+<meta name="keywords" content="qr code generator, create qr code online, free qr code maker, url to qr code, whatsapp qr code generator, text to qr code, download qr code">
+
+<link rel="canonical" href="https://yoursite.com/tools/qr-code-generator.html">
+
+<!-- ================= OPEN GRAPH ================= -->
+<meta property="og:title" content="Free QR Code Generator Tool">
+<meta property="og:description" content="Generate QR codes instantly for URL, text, phone and download easily.">
+
+<!-- ================= QR LIBRARY ================= -->
+<script src="https://cdn.jsdelivr.net/npm/qrcode/build/qrcode.min.js"></script>
+
+<!-- ================= CSS ================= -->
+<style>
+body{font-family:Arial;background:#f5f7fb;margin:0}
+.container{max-width:900px;margin:auto;padding:20px}
+h1,h2,h3{color:#0f172a}
+.tool-box{background:#fff;padding:20px;border-radius:12px;box-shadow:0 5px 15px rgba(0,0,0,0.05);text-align:center}
+input{width:100%;padding:12px;margin:10px 0;border-radius:8px;border:1px solid #ddd}
+button{background:#2563eb;color:#fff;border:none;padding:10px 20px;border-radius:8px;cursor:pointer}
+button:hover{background:#1e40af}
+canvas{margin-top:20px}
+a{color:#2563eb}
+</style>
+
+<!-- ================= SCHEMA ================= -->
+<script type="application/ld+json">
+{
+ "@context":"https://schema.org",
+ "@type":"WebPage",
+ "name":"QR Code Generator",
+ "description":"Generate QR codes online free",
+ "url":"https://yoursite.com/tools/qr-code-generator.html"
+}
+</script>
+
+<script type="application/ld+json">
+{
+ "@context":"https://schema.org",
+ "@type":"BreadcrumbList",
+ "itemListElement":[
+ {"@type":"ListItem","position":1,"name":"Home","item":"https://yoursite.com"},
+ {"@type":"ListItem","position":2,"name":"QR Code Generator"}
+ ]
+}
+</script>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<!-- ================= H1 ================= -->
+<h1>QR Code Generator Online Free</h1>
+
+<!-- ================= TOOL ================= -->
+<div class="tool-box">
+
+<input type="text" id="text" placeholder="Enter URL, text, phone or WhatsApp link">
+
+<button onclick="generateQR()">Generate QR Code</button>
+
+<br>
+
+<canvas id="qr"></canvas>
+
+<br><br>
+
+<a id="download" style="display:none">Download QR Code</a>
+
+</div>
+
+<!-- ================= SEO CONTENT ================= -->
+
+<h2>What is QR Code Generator?</h2>
+<p>
+QR Code Generator is a powerful online tool that allows users to create QR codes instantly for URLs, text, phone numbers, email addresses, and WhatsApp links. QR codes are widely used in marketing, business, education, and digital payments because they provide a fast and easy way to share information.
+</p>
+
+<h2>How to Use QR Code Generator</h2>
+<p>
+Step 1: Enter your text, URL, or data.  
+Step 2: Click on "Generate QR Code".  
+Step 3: Download your QR code instantly.  
+This process is fast, secure, and works directly in your browser.
+</p>
+
+<h2>Features of QR Code Generator Tool</h2>
+<p>
+✔ Instant QR generation  
+✔ No signup required  
+✔ 100% browser-based  
+✔ High-quality QR download  
+✔ Works on mobile and desktop  
+✔ Supports URL, text, phone, WhatsApp  
+</p>
+
+<h2>Benefits of Using QR Code</h2>
+<p>
+QR codes help businesses increase engagement, improve marketing campaigns, and provide quick access to information. They are widely used in restaurants, payment systems, product packaging, and advertisements.
+</p>
+
+<h2>Use Cases of QR Code Generator</h2>
+<p>
+• Website links sharing  
+• WhatsApp chat QR  
+• Payment QR code  
+• Event registration  
+• Business cards  
+• Social media promotion  
+</p>
+
+<h2>Why QR Code Important for SEO & Marketing?</h2>
+<p>
+QR codes help increase user engagement and traffic. When users scan QR codes, they directly land on your website, improving traffic and SEO signals like bounce rate and session time.
+</p>
+
+<!-- ================= INTERNAL LINKS ================= -->
+<h2>Related Tools</h2>
+<a href="compress-50kb.html">Compress Image</a> |
+<a href="image-resizer.html">Image Resizer</a> |
+<a href="../index.html">Home</a>
+
+<!-- ================= BLOG ================= -->
+<h2>Latest Guides</h2>
+<p><a href="#">How QR Codes Increase Business Growth</a></p>
+<p><a href="#">Best Ways to Use QR Codes in Marketing</a></p>
+<p><a href="#">QR Code SEO Strategy Guide</a></p>
+
+<!-- ================= FAQ ================= -->
+<h2>Frequently Asked Questions</h2>
+
+<p><b>What is QR code generator?</b><br>A tool to create QR codes from text or URLs.</p>
+
+<p><b>Is QR generator free?</b><br>Yes, 100% free.</p>
+
+<p><b>Can I create WhatsApp QR?</b><br>Yes, just paste WhatsApp link.</p>
+
+<p><b>Is it safe?</b><br>Yes, works in browser.</p>
+
+<p><b>Can I download QR code?</b><br>Yes, download instantly.</p>
+
+</div>
+
+<!-- ================= JS ================= -->
+<script>
+function generateQR(){
+
+let text=document.getElementById("text").value;
+
+if(!text){
+alert("Enter text or URL");
+return;
+}
+
+let canvas=document.getElementById("qr");
+
+QRCode.toCanvas(canvas, text, function (error) {
+if (error) console.error(error);
+});
+
+canvas.toBlob(function(blob){
+let url=URL.createObjectURL(blob);
+let link=document.getElementById("download");
+link.href=url;
+link.download="qr-code.png";
+link.style.display="inline";
+});
+
+}
+</script>
+
+<!-- ================= FAQ SCHEMA ================= -->
+<script type="application/ld+json">
+{
+ "@context":"https://schema.org",
+ "@type":"FAQPage",
+ "mainEntity":[
+ {
+  "@type":"Question",
+  "name":"What is QR code generator?",
+  "acceptedAnswer":{"@type":"Answer","text":"It creates QR codes from text or URL"}
+ },
+ {
+  "@type":"Question",
+  "name":"Is it free?",
+  "acceptedAnswer":{"@type":"Answer","text":"Yes it is free"}
+ }
+ ]
+}
+</script>
+
+</body>
+</html>

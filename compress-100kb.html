@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<!-- ================= BASIC SEO ================= -->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Compress Image to 100KB Online Free | Reduce Image Size to 100KB Without Losing Quality</title>
+
+<meta name="description" content="Compress image to 100KB online free. Reduce JPG, PNG, WebP image size without losing quality. Fast, secure, no upload required image compressor tool.">
+
+<meta name="keywords" content="
+compress image to 100kb, image compressor 100kb, reduce image size to 100kb, photo compressor online, shrink image size, jpg compressor 100kb,
+png compressor, webp compressor, online image optimizer, image size reducer, compress photo for form, passport photo size 100kb,
+best image compressor tool, free image compressor, reduce kb of image, compress image online free, seo image optimization tool
+">
+
+<link rel="canonical" href="https://yoursite.com/tools/compress-100kb.html">
+
+<!-- ================= OPEN GRAPH ================= -->
+<meta property="og:title" content="Compress Image to 100KB Online Free">
+<meta property="og:description" content="Reduce image size to 100KB instantly without losing quality.">
+<meta property="og:type" content="website">
+
+<!-- ================= STYLES ================= -->
+<style>
+body{font-family:Arial;background:#f5f7fb;margin:0}
+.container{max-width:900px;margin:auto;padding:20px}
+h1,h2,h3{color:#0f172a}
+.tool-box{background:#fff;padding:20px;border-radius:12px;box-shadow:0 5px 15px rgba(0,0,0,0.05)}
+button{background:#2563eb;color:#fff;border:none;padding:10px 20px;border-radius:8px;cursor:pointer}
+button:hover{background:#1e40af}
+a{color:#2563eb}
+img{max-width:100%;margin-top:10px;border-radius:10px}
+</style>
+
+<!-- ================= SCHEMA ================= -->
+
+<!-- WebPage Schema -->
+<script type="application/ld+json">
+{
+ "@context":"https://schema.org",
+ "@type":"WebPage",
+ "name":"Compress Image to 100KB",
+ "description":"Free online image compressor tool to reduce image size to 100KB"
+}
+</script>
+
+<!-- Breadcrumb -->
+<script type="application/ld+json">
+{
+ "@context":"https://schema.org",
+ "@type":"BreadcrumbList",
+ "itemListElement":[
+ {"@type":"ListItem","position":1,"name":"Home","item":"https://yoursite.com"},
+ {"@type":"ListItem","position":2,"name":"Compress Image to 100KB"}
+ ]
+}
+</script>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>Compress Image to 100KB Online Free</h1>
+
+<!-- ================= TOOL ================= -->
+<div class="tool-box">
+
+<input type="file" id="upload">
+<br><br>
+
+<button onclick="compress()">Compress to 100KB</button>
+
+<p id="info"></p>
+
+<img id="preview" style="display:none">
+
+<a id="download" style="display:none">Download Image</a>
+
+</div>
+
+<!-- ================= SEO CONTENT ================= -->
+
+<h2>What is Image Compression?</h2>
+<p>
+Image compression is the process of reducing the file size of an image without significantly affecting its quality. This tool helps you compress image to 100KB easily using advanced browser-based technology. Whether you are working with JPG, PNG, or WebP formats, this tool ensures fast and efficient compression.
+</p>
+
+<h2>Why Compress Image to 100KB?</h2>
+<p>
+Many websites, job portals, and government forms require images under 100KB. Compressing images helps reduce loading time, improves SEO performance, and ensures compatibility with upload limits.
+</p>
+
+<h2>How to Compress Image to 100KB Online</h2>
+<p>
+Step 1: Upload your image file<br>
+Step 2: Click compress button<br>
+Step 3: Download optimized image instantly
+</p>
+
+<h2>Features of This Tool</h2>
+<ul>
+<li>Fast compression in browser</li>
+<li>No upload required</li>
+<li>Supports JPG, PNG, WebP</li>
+<li>Maintains image quality</li>
+<li>Free unlimited usage</li>
+</ul>
+
+<h2>Benefits of Image Optimization</h2>
+<p>
+Optimizing images improves website speed, reduces bounce rate, and increases Google ranking. It also saves bandwidth and enhances user experience.
+</p>
+
+<h2>Use Cases</h2>
+<p>
+Passport photos, job applications, online forms, website images, social media uploads, blog optimization.
+</p>
+
+<h2>Technical Working</h2>
+<p>
+This tool uses HTML5 canvas and JavaScript to resize and compress images. It adjusts image quality dynamically to reach the target size of 100KB.
+</p>
+
+<!-- ================= INTERNAL LINKS ================= -->
+<h2>Related Tools</h2>
+
+<a href="compress-50kb.html">Compress to 50KB</a> |
+<a href="image-resizer.html">Image Resizer</a> |
+<a href="../index.html">Home</a>
+
+<!-- ================= BLOG SECTION ================= -->
+
+<h2>Latest Guides</h2>
+
+<p><a href="#">How to Reduce Image Size Without Losing Quality</a></p>
+<p><a href="#">Best Image Size for Website SEO</a></p>
+<p><a href="#">JPEG vs PNG vs WebP Guide</a></p>
+
+<!-- ================= FAQ ================= -->
+
+<h2>Frequently Asked Questions</h2>
+
+<p><b>How to compress image to 100KB?</b><br>Upload image and click compress.</p>
+
+<p><b>Is this tool free?</b><br>Yes, completely free.</p>
+
+<p><b>Does quality reduce?</b><br>Slight reduction but optimized.</p>
+
+<p><b>Which formats supported?</b><br>JPG, PNG, WebP.</p>
+
+<p><b>Is it secure?</b><br>Yes, works in browser.</p>
+
+</div>
+
+<!-- ================= JS ================= -->
+
+<script>
+function compress(){
+let file=document.getElementById("upload").files[0];
+if(!file){alert("Upload image");return;}
+
+let reader=new FileReader();
+let img=new Image();
+
+reader.onload=function(e){
+img.src=e.target.result;
+document.getElementById("preview").src=e.target.result;
+document.getElementById("preview").style.display="block";
+}
+
+img.onload=function(){
+
+let canvas=document.createElement("canvas");
+let ctx=canvas.getContext("2d");
+
+canvas.width=img.width;
+canvas.height=img.height;
+
+ctx.drawImage(img,0,0);
+
+let quality=0.9;
+
+function loop(){
+canvas.toBlob(function(blob){
+
+if(blob.size<=100000||quality<0.1){
+
+document.getElementById("info").innerText="Compressed: "+(blob.size/1024).toFixed(2)+" KB";
+
+let url=URL.createObjectURL(blob);
+
+let link=document.getElementById("download");
+link.href=url;
+link.download="compressed-100kb.jpg";
+link.style.display="block";
+
+}else{
+quality-=0.1;
+loop();
+}
+
+},"image/jpeg",quality);
+}
+
+loop();
+
+}
+
+reader.readAsDataURL(file);
+}
+</script>
+
+<!-- ================= FAQ SCHEMA ================= -->
+<script type="application/ld+json">
+{
+ "@context":"https://schema.org",
+ "@type":"FAQPage",
+ "mainEntity":[
+ {
+  "@type":"Question",
+  "name":"How to compress image to 100KB?",
+  "acceptedAnswer":{"@type":"Answer","text":"Upload image and click compress"}
+ },
+ {
+  "@type":"Question",
+  "name":"Is this tool free?",
+  "acceptedAnswer":{"@type":"Answer","text":"Yes, completely free"}
+ }
+ ]
+}
+</script>
+
+</body>
+</html>

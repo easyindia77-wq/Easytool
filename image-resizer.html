@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Resize Image Online Free | Change Image Size Without Losing Quality</title>
+
+<meta name="description" content="Resize image online free. Change image width and height without losing quality. Fast, secure, browser-based image resizer tool for JPG, PNG, WebP.">
+
+<meta name="keywords" content="
+resize image online,
+image resizer free,
+change image size,
+resize image without losing quality,
+photo resizer online,
+resize jpg png,
+image width height changer,
+online image editor resize,
+best image resizer tool
+">
+
+<link rel="canonical" href="https://yoursite.com/tools/image-resizer.html">
+
+<meta property="og:title" content="Resize Image Online Free Tool">
+<meta property="og:description" content="Change image size instantly without losing quality.">
+
+<style>
+body{font-family:Arial;background:#f5f7fb;margin:0}
+.container{max-width:900px;margin:auto;padding:20px}
+h1,h2{color:#0f172a}
+.tool-box{background:#fff;padding:20px;border-radius:12px;box-shadow:0 5px 15px rgba(0,0,0,0.05)}
+button{background:#2563eb;color:#fff;border:none;padding:10px 20px;border-radius:8px;cursor:pointer}
+button:hover{background:#1e40af}
+input{padding:8px;margin:5px;border-radius:6px;border:1px solid #ccc}
+img{max-width:100%;margin-top:10px;border-radius:10px}
+</style>
+
+<!-- Schema -->
+<script type="application/ld+json">
+{
+ "@context":"https://schema.org",
+ "@type":"WebPage",
+ "name":"Image Resizer Tool",
+ "description":"Resize image online free without losing quality"
+}
+</script>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>Resize Image Online Free Tool</h1>
+
+<div class="tool-box">
+
+<input type="file" id="upload"><br><br>
+
+Width: <input type="number" id="width" placeholder="Width">
+Height: <input type="number" id="height" placeholder="Height">
+
+<label>
+<input type="checkbox" id="ratio" checked> Maintain Aspect Ratio
+</label>
+
+<br><br>
+<button onclick="resizeImage()">Resize Image</button>
+
+<p id="info"></p>
+<img id="preview" style="display:none">
+<a id="download" style="display:none">Download Image</a>
+
+</div>
+
+<!-- SEO CONTENT -->
+<h2>What is Image Resizing?</h2>
+<p>
+Image resizing is the process of changing the width and height of an image without affecting its visual quality. This online image resizer allows you to resize image online free without installing any software. It works directly in your browser using advanced HTML5 canvas technology.
+</p>
+
+<h2>Why Use an Image Resizer Tool?</h2>
+<p>
+Resizing images is important for website optimization, faster loading speed, and better SEO ranking. Large images slow down websites, while optimized images improve performance and user experience.
+</p>
+
+<h2>How to Resize Image Online</h2>
+<p>
+1. Upload your image (JPG, PNG, WebP)<br>
+2. Enter width and height<br>
+3. Click resize button<br>
+4. Download resized image instantly
+</p>
+
+<h2>Benefits of Image Resizing</h2>
+<p>
+✔ Faster website loading speed<br>
+✔ Improved SEO ranking<br>
+✔ Reduced file size<br>
+✔ Better user experience<br>
+✔ Mobile-friendly optimization
+</p>
+
+<h2>Use Cases</h2>
+<p>
+Website images, social media posts, blog thumbnails, eCommerce product images, profile pictures, banners.
+</p>
+
+<!-- INTERNAL LINKS -->
+<h2>Related Tools</h2>
+<a href="compress-50kb.html">Compress Image</a> |
+<a href="../index.html">Home</a>
+
+<!-- BLOG -->
+<h2>Latest Image Optimization Guides</h2>
+
+<h3>Best Image Size for Website SEO</h3>
+<p>
+Optimized images improve Google ranking. Always resize images before uploading to websites to improve loading speed and performance.
+</p>
+
+<h3>How to Resize Images Without Losing Quality</h3>
+<p>
+Use proper aspect ratio and avoid stretching images. This tool helps maintain quality while resizing.
+</p>
+
+<h3>JPEG vs PNG vs WebP</h3>
+<p>
+Choose the right format: JPEG for photos, PNG for transparency, WebP for best compression.
+</p>
+
+<!-- FAQ -->
+<h2>Frequently Asked Questions</h2>
+
+<p><b>How to resize image?</b><br>Upload image and set width & height.</p>
+<p><b>Is it free?</b><br>Yes.</p>
+<p><b>Does quality reduce?</b><br>No major loss.</p>
+<p><b>Supported formats?</b><br>JPG, PNG, WebP.</p>
+<p><b>Is it safe?</b><br>Yes browser-based.</p>
+
+</div>
+
+<!-- JS -->
+<script>
+let originalWidth, originalHeight;
+
+document.getElementById("upload").addEventListener("change", function(e){
+let file = e.target.files[0];
+let reader = new FileReader();
+let img = new Image();
+
+reader.onload = function(ev){
+img.src = ev.target.result;
+document.getElementById("preview").src = ev.target.result;
+document.getElementById("preview").style.display = "block";
+};
+
+img.onload = function(){
+originalWidth = img.width;
+originalHeight = img.height;
+document.getElementById("width").value = originalWidth;
+document.getElementById("height").value = originalHeight;
+};
+
+reader.readAsDataURL(file);
+});
+
+function resizeImage(){
+let file = document.getElementById("upload").files[0];
+if(!file){ alert("Upload image"); return; }
+
+let width = document.getElementById("width").value;
+let height = document.getElementById("height").value;
+let maintain = document.getElementById("ratio").checked;
+
+let reader = new FileReader();
+let img = new Image();
+
+reader.onload = function(e){
+img.src = e.target.result;
+};
+
+img.onload = function(){
+if(maintain){
+let ratio = originalWidth / originalHeight;
+height = width / ratio;
+}
+
+let canvas = document.createElement("canvas");
+canvas.width = width;
+canvas.height = height;
+
+let ctx = canvas.getContext("2d");
+ctx.drawImage(img,0,0,width,height);
+
+canvas.toBlob(function(blob){
+document.getElementById("info").innerText = "Resized Image Ready";
+let url = URL.createObjectURL(blob);
+let link = document.getElementById("download");
+link.href = url;
+link.download = "resized.jpg";
+link.style.display = "block";
+},"image/jpeg",0.9);
+};
+
+reader.readAsDataURL(file);
+}
+</script>
+
+<!-- FAQ SCHEMA -->
+<script type="application/ld+json">
+{
+ "@context":"https://schema.org",
+ "@type":"FAQPage",
+ "mainEntity":[
+ {
+  "@type":"Question",
+  "name":"How to resize image online?",
+  "acceptedAnswer":{"@type":"Answer","text":"Upload image and set width and height"}
+ },
+ {
+  "@type":"Question",
+  "name":"Is this tool free?",
+  "acceptedAnswer":{"@type":"Answer","text":"Yes completely free"}
+ }
+ ]
+}
+</script>
+
+</body>
+</html>

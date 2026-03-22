@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- ✅ SEO -->
+<title>Word Counter Online Free | Character, Sentence & Paragraph Counter Tool</title>
+
+<meta name="description" content="Free word counter tool to count words, characters, sentences, and paragraphs instantly. Fast, accurate and SEO-friendly text analysis tool.">
+
+<meta name="keywords" content="word counter, character counter, text counter, count words online, sentence counter, paragraph counter tool">
+
+<link rel="canonical" href="https://yoursite.com/tools/word-counter.html">
+
+<!-- ✅ OPEN GRAPH -->
+<meta property="og:title" content="Word Counter Online Free">
+<meta property="og:description" content="Count words, characters and sentences instantly">
+<meta property="og:type" content="website">
+
+<!-- ✅ CSS -->
+<style>
+body{font-family:Arial;margin:0;background:#f5f7fb}
+.container{max-width:1000px;margin:auto;padding:20px}
+h1,h2,h3{color:#0f172a}
+.box{background:#fff;padding:20px;border-radius:12px;box-shadow:0 5px 15px rgba(0,0,0,0.05)}
+textarea{width:100%;height:200px;padding:10px;border-radius:8px;border:1px solid #ddd;margin-top:10px}
+.stats{margin-top:15px;font-weight:bold}
+button{background:#2563eb;color:#fff;border:none;padding:10px 15px;border-radius:8px;margin:5px;cursor:pointer}
+button:hover{background:#1e40af}
+a{color:#2563eb}
+</style>
+
+<!-- ✅ SCHEMA -->
+<script type="application/ld+json">
+{
+ "@context":"https://schema.org",
+ "@type":"WebPage",
+ "name":"Word Counter Tool",
+ "description":"Free online word and character counter tool"
+}
+</script>
+
+<script type="application/ld+json">
+{
+ "@context":"https://schema.org",
+ "@type":"BreadcrumbList",
+ "itemListElement":[
+  {"@type":"ListItem","position":1,"name":"Home","item":"https://yoursite.com"},
+  {"@type":"ListItem","position":2,"name":"Word Counter"}
+ ]
+}
+</script>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<!-- ✅ H1 -->
+<h1>Word Counter Online Free</h1>
+
+<!-- ✅ TOOL -->
+<div class="box">
+
+<label>Enter your text:</label>
+<textarea id="text" oninput="countText()"></textarea>
+
+<div class="stats" id="stats">
+Words: 0 | Characters: 0 | Sentences: 0 | Paragraphs: 0
+</div>
+
+<button onclick="copyText()">Copy</button>
+<button onclick="clearText()">Clear</button>
+
+</div>
+
+<!-- ✅ SEO CONTENT -->
+
+<h2>What is Word Counter?</h2>
+<p>
+Word counter is an online tool that helps you count words, characters, sentences, and paragraphs in a text instantly. It is widely used by writers, students, bloggers, and professionals to analyze text length and structure.
+</p>
+
+<h2>Why Use Word Counter Tool?</h2>
+<p>
+Many platforms like social media, blogs, and SEO require specific word limits. This tool ensures your content meets those limits easily and accurately.
+</p>
+
+<h2>Features of Word Counter Tool</h2>
+<ul>
+<li>Real-time counting</li>
+<li>Word and character count</li>
+<li>Sentence and paragraph detection</li>
+<li>Fast and accurate</li>
+<li>Free to use</li>
+</ul>
+
+<h2>How to Use This Tool?</h2>
+<p>
+Paste or type your text → Instantly see counts → Copy or clear text.
+</p>
+
+<h2>Benefits</h2>
+<p>
+Improves writing quality, helps SEO optimization, ensures proper length for articles and posts.
+</p>
+
+<h2>Use Cases</h2>
+<p>
+Used in blogging, academic writing, social media posts, SEO content writing, and email drafting.
+</p>
+
+<h2>Technical Explanation</h2>
+<p>
+This tool uses JavaScript string functions to split words, count characters, detect sentences and paragraphs efficiently.
+</p>
+
+<!-- ✅ INTERNAL LINKS -->
+<h2>Related Tools</h2>
+<a href="character-counter.html">Character Counter</a> |
+<a href="json-formatter.html">JSON Formatter</a> |
+<a href="../index.html">Home</a>
+
+<!-- ✅ BLOG -->
+<h2>Writing Guides</h2>
+<p><a href="#">Best Word Count for SEO</a></p>
+<p><a href="#">How to Write High Quality Content</a></p>
+
+<!-- ✅ FAQ -->
+<h2>FAQ</h2>
+
+<p><b>Is word counter free?</b><br>Yes, completely free.</p>
+
+<p><b>Does it count characters?</b><br>Yes.</p>
+
+<p><b>Is it accurate?</b><br>Yes.</p>
+
+<p><b>Can I use it for SEO?</b><br>Yes.</p>
+
+<p><b>Does it store data?</b><br>No.</p>
+
+</div>
+
+<!-- ✅ JAVASCRIPT -->
+<script>
+function countText(){
+let text=document.getElementById("text").value;
+
+let words=text.trim().split(/\s+/).filter(w=>w.length>0).length;
+let chars=text.length;
+let sentences=(text.match(/[.!?]+/g)||[]).length;
+let paragraphs=text.split(/\n+/).filter(p=>p.trim().length>0).length;
+
+document.getElementById("stats").innerText=
+"Words: "+words+" | Characters: "+chars+" | Sentences: "+sentences+" | Paragraphs: "+paragraphs;
+}
+
+function copyText(){
+let text=document.getElementById("text");
+text.select();
+document.execCommand("copy");
+alert("Copied!");
+}
+
+function clearText(){
+document.getElementById("text").value="";
+countText();
+}
+</script>
+
+<!-- ✅ FAQ SCHEMA -->
+<script type="application/ld+json">
+{
+ "@context":"https://schema.org",
+ "@type":"FAQPage",
+ "mainEntity":[
+ {
+  "@type":"Question",
+  "name":"What is word counter?",
+  "acceptedAnswer":{"@type":"Answer","text":"Tool to count words and characters"}
+ }
+ ]
+}
+</script>
+
+</body>
+</html>

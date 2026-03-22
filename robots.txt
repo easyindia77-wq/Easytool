@@ -1,0 +1,23 @@
+User-agent: *
+Allow: /
+
+Important Pages
+
+Allow: /index.html
+Allow: /tools/
+
+Block unnecessary files
+
+Disallow: /cdn-cgi/
+Disallow: /private/
+Disallow: /tmp/
+Disallow: /.json$
+Disallow: /.log$
+
+Crawl Delay (optional, safe for bots)
+
+Crawl-delay: 5
+
+Sitemap (VERY IMPORTANT)
+
+Sitemap: https://your-project.pages.dev/sitemap.xml

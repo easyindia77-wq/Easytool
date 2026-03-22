@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- ✅ SEO -->
+<title>EMI Calculator Online Free | Calculate Loan EMI Instantly (Home, Car, Personal Loan)</title>
+
+<meta name="description" content="Free EMI calculator to calculate home loan, car loan, and personal loan EMI instantly. Fast, accurate and easy to use EMI calculator online.">
+
+<meta name="keywords" content="emi calculator, loan emi calculator, home loan emi, car loan emi, personal loan calculator, interest calculator, monthly emi tool">
+
+<link rel="canonical" href="https://yoursite.com/tools/emi-calculator.html">
+
+<!-- ✅ Open Graph -->
+<meta property="og:title" content="EMI Calculator Online Free">
+<meta property="og:description" content="Calculate EMI instantly for any loan using our free tool">
+<meta property="og:type" content="website">
+
+<!-- ✅ CSS -->
+<style>
+body{font-family:Arial;margin:0;background:#f5f7fb}
+.container{max-width:900px;margin:auto;padding:20px}
+h1,h2{color:#0f172a}
+.box{background:#fff;padding:20px;border-radius:12px;box-shadow:0 5px 15px rgba(0,0,0,0.05)}
+input{width:100%;padding:10px;margin:10px 0;border:1px solid #ddd;border-radius:8px}
+button{background:#2563eb;color:#fff;border:none;padding:10px 20px;border-radius:8px;cursor:pointer}
+button:hover{background:#1e40af}
+.result{margin-top:15px;font-weight:bold}
+a{color:#2563eb}
+</style>
+
+<!-- ✅ SCHEMA -->
+<script type="application/ld+json">
+{
+ "@context":"https://schema.org",
+ "@type":"WebPage",
+ "name":"EMI Calculator",
+ "description":"Free EMI calculator for loans"
+}
+</script>
+
+<script type="application/ld+json">
+{
+ "@context":"https://schema.org",
+ "@type":"BreadcrumbList",
+ "itemListElement":[
+  {"@type":"ListItem","position":1,"name":"Home","item":"https://yoursite.com"},
+  {"@type":"ListItem","position":2,"name":"EMI Calculator"}
+ ]
+}
+</script>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<!-- ✅ H1 -->
+<h1>EMI Calculator Online Free</h1>
+
+<!-- ✅ TOOL -->
+<div class="box">
+
+<label>Loan Amount (₹)</label>
+<input type="number" id="amount" placeholder="Enter loan amount">
+
+<label>Interest Rate (%)</label>
+<input type="number" id="rate" placeholder="Enter interest rate">
+
+<label>Loan Tenure (Years)</label>
+<input type="number" id="years" placeholder="Enter years">
+
+<button onclick="calculateEMI()">Calculate EMI</button>
+
+<div class="result" id="result"></div>
+
+</div>
+
+<!-- ✅ SEO CONTENT -->
+<h2>What is EMI Calculator?</h2>
+<p>
+EMI calculator is an online financial tool that helps you calculate monthly EMI for loans such as home loan, car loan, and personal loan. It gives accurate EMI results instantly using a mathematical formula.
+</p>
+
+<h2>How EMI is Calculated?</h2>
+<p>
+EMI is calculated using formula:
+<br>
+<b>EMI = [P × R × (1+R)^N] / [(1+R)^N – 1]</b>
+<br>
+Where P = Loan amount, R = monthly interest rate, N = number of months.
+</p>
+
+<h2>Benefits of EMI Calculator</h2>
+<ul>
+<li>Instant results</li>
+<li>Accurate calculations</li>
+<li>Better financial planning</li>
+<li>Compare loan options</li>
+</ul>
+
+<h2>Use Cases</h2>
+<p>
+Used for home loans, car loans, personal loans, education loans and business loans planning.
+</p>
+
+<h2>Why Use Our EMI Tool?</h2>
+<p>
+This tool is fast, secure, and works in browser without storing any data. It helps users plan finances and understand loan burden before applying.
+</p>
+
+<!-- ✅ INTERNAL LINKS -->
+<h2>Related Tools</h2>
+<a href="compress-50kb.html">Compress Image</a> |
+<a href="image-resizer.html">Image Resizer</a> |
+<a href="../index.html">Home</a>
+
+<!-- ✅ BLOG SECTION -->
+<h2>Financial Guides</h2>
+<p><a href="#">How to Reduce Loan EMI</a></p>
+<p><a href="#">Best Loan Planning Strategy</a></p>
+
+<!-- ✅ FAQ -->
+<h2>FAQ</h2>
+
+<p><b>What is EMI?</b><br>EMI means Equated Monthly Installment.</p>
+
+<p><b>Is EMI calculator accurate?</b><br>Yes, it uses standard formula.</p>
+
+<p><b>Can I use it for any loan?</b><br>Yes, for all loan types.</p>
+
+<p><b>Is this tool free?</b><br>Yes 100% free.</p>
+
+<p><b>Does it store data?</b><br>No, everything runs in browser.</p>
+
+</div>
+
+<!-- ✅ JAVASCRIPT -->
+<script>
+function calculateEMI(){
+let P=document.getElementById("amount").value;
+let R=document.getElementById("rate").value/12/100;
+let N=document.getElementById("years").value*12;
+
+if(!P||!R||!N){
+alert("Fill all fields");
+return;
+}
+
+let EMI=(P*R*Math.pow(1+R,N))/(Math.pow(1+R,N)-1);
+
+document.getElementById("result").innerText=
+"Monthly EMI: ₹ "+EMI.toFixed(2);
+}
+</script>
+
+<!-- ✅ FAQ SCHEMA -->
+<script type="application/ld+json">
+{
+ "@context":"https://schema.org",
+ "@type":"FAQPage",
+ "mainEntity":[
+ {
+  "@type":"Question",
+  "name":"What is EMI?",
+  "acceptedAnswer":{"@type":"Answer","text":"EMI means Equated Monthly Installment"}
+ }
+ ]
+}
+</script>
+
+</body>
+</html>
